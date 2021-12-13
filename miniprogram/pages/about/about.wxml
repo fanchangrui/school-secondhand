@@ -1,0 +1,8 @@
+
+<view class="main">
+	<view class="image">
+		<view >
+			<image class="im" src="{{img}}" ></image>
+		</view>
+	</view>
+</view>
