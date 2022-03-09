@@ -23,7 +23,7 @@
                         <view class="c1 bg-green" catchtap="up" data-up="{{item}}" wx:if="{{item.status==3}}">重新上架</view>
                         <view class="c2 bg-red" wx:if="{{item.status==5||item.status==1}}" catchtap="quxiao" data-quxiao="{{item}}">取消交易</view>
                         <view class="c2 bg-green" wx:if="{{item.status==5||item.status==1}}" catchtap="wancheng" data-wancheng="{{item}}">完成交易</view>
-                        <view class="c1 bg-yellow" wx:if="{{item.status==0}}" catchtap="crash" data-crash="{{item}}">擦亮</view>
+                        <view class="c1 bg-yellow" wx:if="{{item.status==0}}" catchtap="crash" data-crash="{{item}}">重新发布</view>
                   </view>
             </view>
       </block>

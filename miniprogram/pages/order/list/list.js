@@ -55,6 +55,7 @@ Page({
                   title: '加载中',
             })
             this.getlist();
+            console.log(11111,this.data)
       },
       //获取列表
       getlist() {
@@ -162,10 +163,12 @@ Page({
       sendCancel(openid) {
             let that = this;
             wx.cloud.callFunction({
-                  name: "sendMsg",
+                  name: "email",
                   data: {
                         openid: that.data.detail.seller,
-                        status: '买家取消订单，已重新上架物品', //0在售；1买家已付款，但卖家未发货；2买家确认收获，交易完成；
+                        status: '买家取消订单，已重新上架物品', 
+                        type:4,
+                        email:that.data.detail.buyerInfo.email,
                         address: that.data.address,
                         describe: that.data.detail.bookinfo.describe,
                         good: that.data.detail.bookinfo.good,
@@ -182,10 +185,12 @@ Page({
       send() {
             let that = this;
             wx.cloud.callFunction({
-                  name: "sendMsg",
+                  name: "email",
                   data: {
                         openid: that.data.detail.seller,
                         status: '买家已确认收货，请确认是否收到钱款',
+                        type:5,
+                        email:that.data.detail.buyerInfo.email,
                         address: that.data.address,
                         describe: that.data.detail.bookinfo.describe,
                         good: that.data.detail.bookinfo.good,

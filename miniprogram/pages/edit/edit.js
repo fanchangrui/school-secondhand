@@ -15,17 +15,7 @@ Page({
             campus: JSON.parse(config.data).campus,
       },
       onChange(event) {
-            if(event.detail==true){
-                  wx.requestSubscribeMessage({
-                        tmplIds: ['6DGzsKqipoPxClnbkvwnxY9GqdXoLordLRdWTjJN1F0','XXmEjf37meLWQaEsOX6qkkufcVH-YKAL3cHyY9Lru0Q'], //这里填入我们生成的模板id
-                        success(res) {          
-                              console.log('授权成功', res)
-                        },
-                        fail(res) {
-                              console.log('授权失败', res)
-                        }
-                  })
-            }
+        
             this.setData({
               checked: event.detail,
             });

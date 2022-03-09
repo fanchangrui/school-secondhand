@@ -39,10 +39,24 @@ Page({
                         that.setData({
                               buyerInfo: res.data[0],
                         })
+                       
+                  }
+            })
+            
+      },
+      getSeller(m) {
+            let that = this;
+            db.collection('user').where({
+                  _openid: m
+            }).get({
+                  success: function(res) {
+                        that.setData({
+                              userinfo: res.data[0]
+                        })
+                        console.log(2222,that.userinfo);
                   }
             })
       },
-
       getList() {
             let that = this;
             db.collection('publish').where({
@@ -56,6 +70,7 @@ Page({
                               nomore: false,
                               page: 0,
                         })
+                        getSeller(res.data._openid)
                         console.log(res.data)
                   }
             })
@@ -98,21 +113,21 @@ Page({
             let crash = e.currentTarget.dataset.crash;
             wx.showModal({
                   title: '温馨提示',
-                  content: '您确定要擦亮此条订单吗？',
+                  content: '您确定要重新发布此条订单吗？',
                   success(res) {
                         if (res.confirm) {
                               wx.showLoading({
-                                    title: '正在擦亮'
+                                    title: '正在发布'
                               })
                               db.collection('publish').doc(crash._id).update({
                                     data: {
                                           creat: new Date().getTime(),
-                                          dura: new Date().getTime() + 7 * (24 * 60 * 60 * 1000), //每次擦亮管7天
+                                          dura: new Date().getTime() + 7 * (24 * 60 * 60 * 1000), //每次重新发布管7天
                                     },
                                     success() {
                                           wx.hideLoading();
                                           wx.showToast({
-                                                title: '成功擦亮',
+                                                title: '成功发布',
                                           })
                                           that.getList();
                                     },
@@ -215,11 +230,13 @@ Page({
       sendCancel(openid) {
             let that = this;
             wx.cloud.callFunction({
-                  name: "sendMsg",
+                  name: "email",
                   data: {
                         openid: openid,
                         status: '卖家取消交易', //0在售；1买家已付款，但卖家未发货；2买家确认收获，交易完成；
                         address: that.data.address,
+                        type:3,
+                        email:that.data.detail.buyerInfo.email,
                         describe: that.data.buyerInfo.bookinfo.describe,
                         good: that.data.buyerInfo.bookinfo.good,
                         nickName: that.data.sellerInfo.nickName,

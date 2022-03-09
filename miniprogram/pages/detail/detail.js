@@ -420,11 +420,13 @@ Page({
       send(openid) {
             let that = this;
             wx.cloud.callFunction({
-                  name: "sendMsg",
+                  name: "email",
                   data: {
                         openid: openid,
                         status: '买家已预定', //0在售；1买家已付款，但卖家未发货；2买家确认收获，交易完成；
                         address:that.data.address,
+                        type: 1,
+                        email:that.data.detail.buyerInfo.email,
                         describe: that.data.publishinfo.bookinfo.describe,
                         good: that.data.publishinfo.bookinfo.good,
                         nickName: that.data.buyerInfo.info.nickName,

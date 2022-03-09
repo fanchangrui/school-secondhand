@@ -122,10 +122,12 @@ Page({
       send() {
             let that = this;
             wx.cloud.callFunction({
-                  name: "sendMsg",
+                  name: "email",
                   data: {
                         openid: that.data.detail.seller,
-                        status: '买家已确认收货，请确认是否收到钱款', //0在售；1买家已付款，但卖家未发货；2买家确认收获，交易完成；
+                        status: '买家已确认收货，请确认是否收到钱款', 
+                        type:5,
+                        email:that.data.detail.buyerInfo.email,
                         address: that.data.address,
                         describe: that.data.detail.bookinfo.describe,
                         good: that.data.detail.bookinfo.good,
