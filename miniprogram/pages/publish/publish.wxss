@@ -348,7 +348,7 @@ picker {
       display: flex;
       justify-content: center;
       align-items: center;
-      background:#fbbd08;
+      background:#87CEFA;
       color: #fff;
       border-radius: 40rpx;
       letter-spacing: 4rpx;
@@ -413,7 +413,7 @@ picker {
       width: 500rpx;
       height: 80rpx;
       border-radius: 40rpx;
-      background: #fbbd08;
+      background: #87CEFA;
       color: #fff;
       display: flex;
       align-items: center;
@@ -492,4 +492,7 @@ picker {
 	border: none;
 	color: white;
 	margin-top: 40rpx;
+}
+.pictures{
+      margin-left: 10rpx;
 }

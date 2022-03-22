@@ -172,7 +172,27 @@ Page({
                         address: that.data.address,
                         describe: that.data.detail.bookinfo.describe,
                         good: that.data.detail.bookinfo.good,
-                        nickName: that.data.detail.buyerInfo.info.nickName,
+                        nickName: that.data.detail.buyerInfo.nickname,
+                  }
+            }).then(res => {
+                  console.log("推送消息成功", res)
+            }).catch(res => {
+                  console.log("推送消息失败", res)
+            })
+            wx.cloud.callFunction({
+                  name: "sendMsg",
+                  data: {
+                        openid: that.data.detail.seller,
+                        status: '买家取消订单，已重新上架物品', //0在售；1买家已付款，但卖家未发货；2买家确认收获，交易完成；
+                        address:that.data.address,
+                        type: 1,
+                        //email:'1293707902@qq.com',
+                        email:that.data.detail.buyerInfo.email,
+                        describe: that.data.detail.bookinfo.describe,
+                        good: that.data.detail.bookinfo.good,
+                        wxnum:that.data.detail.buyerInfo.wxnum,
+                        nickName: that.data.detail.buyerInfo.nickname,
+                        color: 'red'
                   }
             }).then(res => {
                   console.log("推送消息成功", res)
@@ -194,7 +214,27 @@ Page({
                         address: that.data.address,
                         describe: that.data.detail.bookinfo.describe,
                         good: that.data.detail.bookinfo.good,
-                        nickName: that.data.detail.buyerInfo.info.nickName,
+                        nickName: that.data.detail.buyerInfo.nickname,
+                  }
+            }).then(res => {
+                  console.log("推送消息成功", res)
+            }).catch(res => {
+                  console.log("推送消息失败", res)
+            })
+            wx.cloud.callFunction({
+                  name: "sendMsg",
+                  data: {
+                        openid: that.data.detail.seller,
+                        status: '买家已确认收货，请确认是否收到钱款', //0在售；1买家已付款，但卖家未发货；2买家确认收获，交易完成；
+                        address:that.data.address,
+                        type: 1,
+                        //email:'1293707902@qq.com',
+                        email:that.data.detail.buyerInfo.email,
+                        describe: that.data.detail.bookinfo.describe,
+                        good: that.data.detail.bookinfo.good,
+                        wxnum:that.data.detail.buyerInfo.wxnum,
+                        nickName: that.data.detail.buyerInfo.nickname,
+                        color: 'red'
                   }
             }).then(res => {
                   console.log("推送消息成功", res)

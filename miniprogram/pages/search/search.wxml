@@ -1,7 +1,7 @@
 <wxs src="../../common.wxs" module="morejs" />
 <view class="top_contain">
       <view class="search_box">
-            <image src="/images/search.png"></image>
+            <image src="/images/search.jpg"></image>
             <input bindinput="keyInput" bindconfirm="search" placeholder="输入您感兴趣的内容"></input>
       </view>
       <view class="search" bindtap="search">搜索</view>
@@ -11,7 +11,7 @@
       <block wx:if="{{list.length==0}}">
             <block wx:if="{{!blank}}">
                   <view class="a">
-                        <image src="/images/his.png"></image>
+                        <image src="/images/his.jpg"></image>
                         <view>搜索历史</view>
                   </view>
                   <block wx:if="{{hislist.length==0}}">
@@ -25,17 +25,17 @@
             </block>
             <block wx:if="{{blank}}">
                   <view class="a">
-                        <image src="/images/result.png"></image>
+                        <image src="/images/result.jpg"></image>
                         <view>搜索结果</view>
                   </view>
                   <!--无内容显示-->
                   <view class="nocontent">
-                        <image src="/images/blank.png"></image>
+                        <image src="/images/blank.jpg"></image>
                         <view class="blank_text">暂无{{key}}相关物品哟~</view>
                   </view>
             </block>
             <view class="a">
-                  <image src="/images/recommend.png"></image>
+                  <image src="/images/recommend.jpg"></image>
                   <view>更多推荐</view>
             </view>
             <block wx:if="{{newlist.length==0}}">
@@ -64,7 +64,7 @@
       </block>
       <block wx:if="{{list.length>0}}">
             <view class="a">
-                  <image src="/images/result.png"></image>
+                  <image src="/images/result.jpg"></image>
                   <view>搜索结果</view>
             </view>
             <block wx:for="{{list}}" wx:key="_id">
@@ -94,6 +94,6 @@
 </block>
 <van-transition show="{{ scrollTop>500 }}" custom-class="block" duration="600">
       <view class="totop" bindtap="gotop">
-            <image src="/images/top.png"></image>
+            <image src="/images/top.jpg"></image>
       </view>
 </van-transition>

@@ -4,7 +4,7 @@
 			<image class="goods_img" src="{{detail.bookinfo.pic[0]}}"></image>
 			<view class="goods_content">
 				<view class="goods_title text-cut">{{detail.bookinfo.good}}</view>
-				<view class="goods_author text-cut">卖家：{{userinfo.info.nickName}}</view>
+				<view class="goods_author text-cut">卖家：{{userinfo.nickname}}</view>
 			</view>
 			<view class="goods_price">￥{{detail.price}}元</view>
 		</view>
@@ -56,14 +56,7 @@
 				删除订单
 			</view>
 		</view>
-		<!-- <view class="border" wx:if="{{appreciateCode}}"></view>
-		<view class="paycode" wx:if="{{appreciateCode}}">扫描下方二维码付款</view>
-		<view wx:if="{{appreciateCode}}" class='imagesize'>
-			<image src="{{appreciateCode}}" mode="scaleToFill" bindtap="img" data-src="{{appreciateCode}}" class='in-image'></image>
-		</view>
-		<view wx:if="{{!appreciateCode}}" class='imagesize'>
-			<image src="{{!appreciateCode}}" mode="scaleToFill" src="https://7461-taoshaoji-46f0r-1302243411.tcb.qcloud.la/gzh/error.jpeg?sign=47d46e3798aea6c838d04518bca1ee9a&t=1597509495" class='in-image'></image>
-		</view> -->
+	
 	</view>
 </view>
 

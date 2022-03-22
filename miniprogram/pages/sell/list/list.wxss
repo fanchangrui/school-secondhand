@@ -120,7 +120,7 @@
 }
 
 .bg-yellow {
-      background: #fbbd08;
+      background: #87CEFA;
       color: #fff;
 }
 .bg-green {

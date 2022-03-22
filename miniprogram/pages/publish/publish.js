@@ -74,7 +74,7 @@ Page({
       },
       onLoad() {
             this.initial();
-            this.getCodeFromSet();
+          //  this.getCodeFromSet();
             
       },
       onShow() {

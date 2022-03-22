@@ -16,17 +16,14 @@
     "pages/search/search",
     "pages/edit/edit",
     "pages/web/web",
-    "pages/message/message",
-    "pages/detail/room/room",
     "pages/use/use",
-    "pages/help/help",
-    "pages/appreciateCode/appreciateCode"
+    "pages/help/help"
   ],
   "window": {
-    "backgroundColor": "#fbbd08",
+    "backgroundColor": "#87CEFA",
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fbbd08",
-    "navigationBarTitleText": "宁大科院交易平台",
+    "navigationBarBackgroundColor": "#87CEFA",
+    "navigationBarTitleText": "科院二手交易平台",
     "navigationBarTextStyle": "white"
   },
   "sitemapLocation": "sitemap.json",
@@ -36,20 +33,20 @@
     "list": [{
         "pagePath": "pages/index/index",
         "text": "首页",
-        "iconPath": "/images/tabbar/home.png",
-        "selectedIconPath": "/images/tabbar/home_on.png"
+        "iconPath": "/images/tabbar/home_on.jpg",
+        "selectedIconPath": "/images/tabbar/home.jpg"
       },
       {
         "pagePath": "pages/publish/publish",
         "text": "发布",
-        "iconPath": "/images/tabbar/publish.png",
-        "selectedIconPath": "/images/tabbar/publish_on.png"
+        "iconPath": "/images/tabbar/publish.jpg",
+        "selectedIconPath": "/images/tabbar/publish_on.jpg"
       },
       {
         "pagePath": "pages/my/my",
         "text": "我的",
-        "iconPath": "/images/tabbar/my.png",
-        "selectedIconPath": "/images/tabbar/my_on.png"
+        "iconPath": "/images/tabbar/my.jpg",
+        "selectedIconPath": "/images/tabbar/my_on.jpg"
       }
     ]
   },
@@ -59,8 +56,7 @@
     "van-stepper": "/vant/stepper/index",
     "van-action-sheet": "/vant/action-sheet/index",
     "van-popup": "/vant/popup/index",
-    "canvasdrawer": "/components/canvasdrawer/canvasdrawer",
-    "tips": "components/add_tips/index",
+
     
     "van-dialog": "/vant/dialog/index",
     "van-button": "/vant/button/index",

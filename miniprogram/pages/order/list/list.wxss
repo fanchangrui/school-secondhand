@@ -27,7 +27,7 @@
 .tab_on {
       font-size: 32rpx;
       font-weight: 600;
-      border-bottom: 4rpx solid #fbbd08;
+      border-bottom: 4rpx solid #87CEFA;
 }
 
 .contain {
@@ -189,8 +189,8 @@
       padding: 0 20rpx;
       height: 50rpx;
       border-radius: 25rpx;
-      color: #fbbd08;
-      border: 1rpx solid #fbbd08;
+      color: #87CEFA;
+      border: 1rpx solid #87CEFA;
       margin-left: 20rpx;
 }
 

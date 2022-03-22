@@ -2,16 +2,15 @@ var data = {
       //云开发环境id
       env: 'cloud1-7gzzujgma68a1f08',
       //分享配置
-      share_title: '校园交易平台',
-      share_img: '/images/share.jpg', //可以是网络地址，本地文件路径要填绝对位置
-      share_poster:'https://www.ndky.edu.cn/r/cms/www/default/static/imgs/common/header-logo.png',//必须为网络地址
+      share_title: '科院二手交易平台',
+      share_img: '/images/touxiang.jpg', 
+      share_poster:'https://www.ndky.edu.cn/r/cms/www/default/static/imgs/common/header-logo.png',
       //客服联系方式
       kefu: {
             qq: '1293707902',
             weixin:'18157572916'
       },
-      //默认启动页背景图，防止请求失败完全空白 
-      //可以是网络地址，本地文件路径要填绝对位置
+
       bgurl: '/images/startBg.jpg',
       //校区
       campus: [{
@@ -60,7 +59,7 @@ var data = {
             },
       ],
 }
-//下面的就别动了
+
 function formTime(creatTime) {
       let date = new Date(creatTime),
             Y = date.getFullYear(),

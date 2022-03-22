@@ -236,11 +236,32 @@ Page({
                         status: '卖家取消交易', //0在售；1买家已付款，但卖家未发货；2买家确认收获，交易完成；
                         address: that.data.address,
                         type:3,
-                        email:that.data.detail.buyerInfo.email,
+                        email:that.data.buyerInfo.email,
                         describe: that.data.buyerInfo.bookinfo.describe,
                         good: that.data.buyerInfo.bookinfo.good,
                         nickName: that.data.sellerInfo.nickName,
                         color: 'yellow'
+                  }
+            }).then(res => {
+                  console.log("推送消息成功", res)
+            }).catch(res => {
+                  console.log("推送消息失败", res)
+                  console.log(that.data);
+            })
+            wx.cloud.callFunction({
+                  name: "sendMsg",
+                  data: {
+                        openid: openid,
+                        status: '卖家取消交易', //0在售；1买家已付款，但卖家未发货；2买家确认收获，交易完成；
+                        address:that.data.address,
+                        type: 1,
+                        //email:'1293707902@qq.com',
+                        email:that.data.buyerInfo.email,
+                        describe: that.data.buyerInfo.bookinfo.describe,
+                        good: that.data.buyerInfo.bookinfo.good,
+                        wxnum:'',
+                        nickName: that.data.sellerInfo.nickName,
+                        color: 'red'
                   }
             }).then(res => {
                   console.log("推送消息成功", res)
@@ -287,21 +308,8 @@ Page({
                                                                               icon: 'none'
                                                                         })
                                                                         that.getList();
-                                                                        wx.showModal({
-                                                                              title: '打赏小程序',
-                                                                              content: '请开发者喝阔落？',
-                                                                              showCancel: true, 
-                                                                              cancelText:'下次一定',
-                                                                              confirmText:'现在就去',
-                                                                              confirmColor: '#fbbd08', 
-                                                                              success(res) {
-                                                                                    if (res.confirm) {
-                                                                                          wx.previewImage({
-                                                                                                urls: ['https://7461-taoshaoji-46f0r-1302243411.tcb.qcloud.la/appreciate-code/appreciateimg.jpg?sign=b6789b4ae3b6c830689f41ddca8f183e&t=1597523262'],
-                                                                                          })
-                                                                                    }
-                                                                              }
-                                                                        })
+                                                      
+                                                                  
                                                                   },
                                                                   fail(e) {
                                                                         wx.hideLoading();

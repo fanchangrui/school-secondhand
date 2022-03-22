@@ -18,7 +18,7 @@ Page({
       onChange(event) {
             if(event.detail==true){
                   wx.requestSubscribeMessage({
-                        tmplIds: ['6DGzsKqipoPxClnbkvwnxY9GqdXoLordLRdWTjJN1F0','XXmEjf37meLWQaEsOX6qkkufcVH-YKAL3cHyY9Lru0Q'], //这里填入我们生成的模板id
+                        tmplIds: ['bdQ4jAfjscweRtub7vHHpex1LG9bcIX-97LzLE39ZJo'], //这里填入我们生成的模板id
                         success(res) {          
                               console.log('授权成功', res)
                         },
@@ -138,8 +138,8 @@ Page({
                         wxnum: that.data.wxnum,
                         stamp: new Date().getTime(),
                         info: that.data.userInfo,
-                        useful: true,
-                        parse: 0,
+                        nickname:'',
+                        avatarurl:''
                   },
                   success: function(res) {
                         console.log(res)
@@ -163,7 +163,7 @@ Page({
         //获取授权的点击事件
         shouquan() {
             wx.requestSubscribeMessage({
-                  tmplIds: ['6DGzsKqipoPxClnbkvwnxY9GqdXoLordLRdWTjJN1F0','XXmEjf37meLWQaEsOX6qkkufcVH-YKAL3cHyY9Lru0Q'], //这里填入我们生成的模板id
+                  tmplIds: ['bdQ4jAfjscweRtub7vHHpex1LG9bcIX-97LzLE39ZJo'], //这里填入我们生成的模板id
                   success(res) {          
                         console.log('授权成功', res)
                   },

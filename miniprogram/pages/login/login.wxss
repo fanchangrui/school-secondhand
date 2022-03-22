@@ -148,7 +148,7 @@
       left: 0rpx;
       width: 100%;
       height: 460rpx;
-      background: #fbbd08;
+      background: #87CEFA;
       background-repeat: no-repeat;
       background-size: 100%;
 }

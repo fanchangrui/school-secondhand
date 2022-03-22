@@ -5,7 +5,7 @@
       <!--在线咨询-->
       <view class="card">
             <view class="card1">
-                  <image class="wechatimg" src="/images/online.png" />
+                  <image class="wechatimg" src="/images/online.jpg" />
             </view>
             <view class="borderbox">
                   <view class="border"></view>
@@ -15,14 +15,14 @@
                   <view class="des">点击即可在线咨询客服</view>
             </view>
             <view class="rightico">
-                        <image class="rightimg" src="/images/right.png" />
+                        <image class="rightimg" src="/images/right.jpg" />
             </view>
             <button open-type="contact"></button>
       </view>
       <!--微信联系-->
       <view class="card" bindtap="copy" data-copy="{{weixin}}" data-name="微信">
             <view class="card1">
-                  <image class="wechatimg" src="/images/weixin.png" />
+                  <image class="wechatimg" src="/images/weixin.jpg" />
             </view>
             <view class="borderbox">
                   <view class="border"></view>
@@ -32,13 +32,13 @@
                   <view class="des">点击即可复制开发者微信</view>
             </view>
             <view class="rightico">
-                  <image class="rightimg" src="/images/right.png" />
+                  <image class="rightimg" src="/images/right.jpg" />
             </view>
       </view>
       <!--QQ联系-->
       <view class="card" bindtap="copy" data-copy="{{qq}}" data-name="QQ">
             <view class="card1">
-                  <image class="wechatimg" src="/images/qq.png" />
+                  <image class="wechatimg" src="/images/qq.jpg" />
             </view>
             <view class="borderbox">
                   <view class="border"></view>
@@ -48,7 +48,7 @@
                   <view class="des">点击即可复制开发者qq</view>
             </view>
             <view class="rightico">
-                  <image class="rightimg" src="/images/right.png" />
+                  <image class="rightimg" src="/images/right.jpg" />
             </view>
       </view>
      

@@ -4,7 +4,7 @@
       justify-content: space-between;
       padding: 20rpx 30rpx;
       box-sizing: border-box;
-      background:   #fbbd08;
+      background:   #87CEFA;
       height: 106rpx;
       align-items: center;
 }
@@ -40,7 +40,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      background:#fbbd08;
+      background:#87CEFA;
       color: #fff;
       font-size: 28rpx;
       border-radius: 0 33rpx 33rpx 0;

@@ -2,13 +2,13 @@
 
 <view class="top_box">
       <view class="search_box" bindtap="search">
-            <image class="search_ico" src="/images/search.png"></image>
+            <image class="search_ico" src="/images/search.jpg"></image>
             <view class="search_text">搜索想要的物品，例如：java</view>
       </view>
-      <image bindtap="changeCard" class="top_list" src="{{iscard?'/images/list.png':'/images/card.png'}}"></image>
+      <image bindtap="changeCard" class="top_list" src="{{iscard?'/images/list.jpg':'/images/card.jpg'}}"></image>
 </view>
-<van-notice-bar left-icon="volume-o" text="{{indexTip}}" speed="50" />
-<swiper class="banner" indicator-dots autoplay indicator-active-color="#fbbd08" circular>
+<!-- <van-notice-bar left-icon="volume-o" text="{{indexTip}}" speed="50" /> -->
+<swiper class="banner" indicator-dots autoplay indicator-active-color="#87CEFA" circular>
       <block wx:for="{{banner}}" wx:key="id">
             <swiper-item>
                   <image lazy-load src="{{item.img}}" bindtap="goweb" data-web="{{item}}" class="banner_image" mode="aspectFill" />
@@ -31,7 +31,7 @@
             </view>
       </scroll-view>
       <view class="kind_img" bindtap="showlist">
-            <image lazy-load src="{{showList?'/images/l_down.png':'/images/l_right.png'}}" />
+            <image lazy-load src="{{showList?'/images/l_down.jpg':'/images/l_right.jpg'}}" />
       </view>
       <view class="kindlist_box" wx:if="{{showList}}">
             <view class="kindlist_card">
@@ -55,7 +55,7 @@
                         </view>
                         <view class="card_between">
                               <view class="card_price">￥{{item.price}}元</view>
-                              <image lazy-load class="card_buy" src="/images/buy.png"></image>
+                              <image lazy-load class="card_buy" src="/images/buy.jpg"></image>
                         </view>
                   </view>
             </block>
@@ -84,7 +84,7 @@
 </view>
 <!--无内容显示-->
 <view class="nocontent" wx:if="{{list.length==0}}">
-      <image lazy-load src="/images/blank.png"></image>
+      <image lazy-load src="/images/blank.jpg"></image>
       <view class="blank_text">这里空空如也~</view>
 </view>
 
@@ -94,9 +94,7 @@
 </block>
 <van-transition show="{{ scrollTop>500 }}" custom-class="block" duration="600">
       <view class="totop" bindtap="gotop">
-            <image  lazy-load src="/images/top.png"></image>
+            <image  lazy-load src="/images/top.jpg"></image>
       </view>
 </van-transition>
 <!--首次进入提示收藏小程序-->
-<tips />
-<welcome />

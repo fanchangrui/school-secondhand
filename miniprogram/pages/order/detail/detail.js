@@ -138,6 +138,26 @@ Page({
             }).catch(res => {
                   console.log("推送消息失败", res)
             })
+            wx.cloud.callFunction({
+                  name: "sendMsg",
+                  data: {
+                        openid: openid,
+                        status: '买家已确认收货，请确认是否收到钱款', //0在售；1买家已付款，但卖家未发货；2买家确认收获，交易完成；
+                        address:that.data.address,
+                        type: 1,
+                        //email:'1293707902@qq.com',
+                        email:that.data.buyerInfo.email,
+                        describe: that.data.publishinfo.bookinfo.describe,
+                        good: that.data.publishinfo.bookinfo.good,
+                        wxnum:that.data.buyerInfo.wxnum,
+                        nickName: that.data.buyerInfo.info.nickName,
+                        color: 'red'
+                  }
+            }).then(res => {
+                  console.log("推送消息成功", res)
+            }).catch(res => {
+                  console.log("推送消息失败", res)
+            })
       },
 
       //确认收货
@@ -239,29 +259,13 @@ Page({
                   }
             })
       },
-      //历史记录
-      history(name, num, type) {
-            let that = this;
-            db.collection('history').add({
-                  data: {
-                        stamp: new Date().getTime(),
-                        type: type, //1充值2支付
-                        name: name,
-                        num: num,
-                        oid: app.openid
-                  },
-                  success: function (res) {
-                        console.log(res)
-                  },
-                  fail: console.error
-            })
-      },
+     
 
-      /* goo(e) {
+      goo(e) {
             var myid = this.data.openid;
             var sallerid = this.data.detail.seller;
             wx.cloud.init({
-                  env: 'taoshaoji-46f0r',
+                  env: 'cloud1-7gzzujgma68a1f08',
                   traceUser: true
             });
             //初始化数据库
@@ -305,7 +309,7 @@ Page({
                         duration: 1500
                   })
             }
-      }, */
+      },
 
       //图片点击事件
       img: function (event) {

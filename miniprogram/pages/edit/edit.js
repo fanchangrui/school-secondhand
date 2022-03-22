@@ -19,6 +19,16 @@ Page({
             this.setData({
               checked: event.detail,
             });
+            wx.requestSubscribeMessage({
+                  tmplIds: ['bdQ4jAfjscweRtub7vHHpex1LG9bcIX-97LzLE39ZJo'], //这里填入我们生成的模板id
+                  success(res) {          
+                        console.log('授权成功', res)
+                  },
+                  fail(res) {
+                        console.log('授权失败', res)
+                  }
+            })
+      
           },
       choose(e) {
             let that = this;
@@ -131,7 +141,7 @@ Page({
                   }
             }
             //校检微信号
-            let wxnum = that.data.wxnum;
+            /* let wxnum = that.data.wxnum;
             if (wxnum !== '') {
                   if (!(/^[a-zA-Z]([-_a-zA-Z0-9]{5,19})+$/.test(wxnum))) {
                         wx.showToast({
@@ -141,7 +151,7 @@ Page({
                         });
                         return false;
                   }
-            }
+            } */
             wx.showLoading({
                   title: '正在提交',
             })

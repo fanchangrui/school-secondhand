@@ -68,11 +68,11 @@ Page({
             })
       },
 
-      /* goo(e) {
+      goo(e) {
             var myid = this.data.openid;
             var sallerid = this.data.goodssaller;
             wx.cloud.init({
-                  env: 'taoshaoji-46f0r',
+                  env: 'cloud1-7gzzujgma68a1f08',
                   traceUser: true
             });
             //初始化数据库
@@ -121,7 +121,7 @@ Page({
                   })
             }
       },
- */
+
 
       changeTitle(e) {
             let that = this;
@@ -426,9 +426,30 @@ Page({
                         status: '买家已预定', //0在售；1买家已付款，但卖家未发货；2买家确认收获，交易完成；
                         address:that.data.address,
                         type: 1,
-                        email:that.data.detail.buyerInfo.email,
+                        //email:'1293707902@qq.com',
+                        email:that.data.buyerInfo.email,
                         describe: that.data.publishinfo.bookinfo.describe,
                         good: that.data.publishinfo.bookinfo.good,
+                        nickName: that.data.buyerInfo.info.nickName,
+                        color: 'red'
+                  }
+            }).then(res => {
+                  console.log("推送消息成功", res)
+            }).catch(res => {
+                  console.log("推送消息失败", res)
+            })
+            wx.cloud.callFunction({
+                  name: "sendMsg",
+                  data: {
+                        openid: openid,
+                        status: '买家已预定', //0在售；1买家已付款，但卖家未发货；2买家确认收获，交易完成；
+                        address:that.data.address,
+                        type: 1,
+                        //email:'1293707902@qq.com',
+                        email:that.data.buyerInfo.email,
+                        describe: that.data.publishinfo.bookinfo.describe,
+                        good: that.data.publishinfo.bookinfo.good,
+                        wxnum:that.data.buyerInfo.wxnum,
                         nickName: that.data.buyerInfo.info.nickName,
                         color: 'red'
                   }

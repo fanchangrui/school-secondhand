@@ -22,17 +22,17 @@
 <!--发布信息-->
 <view hidden="{{!first_title}}">
       <view class="user_box">
-            <image lazy-load src="{{userinfo.info.avatarUrl}}"></image>
+            <image lazy-load src="{{userinfo.avatarurl}}"></image>
             <view class="des_box">
-                  <view class="user_name">{{userinfo.info.nickName}}</view>
+                  <view class="user_name">{{userinfo.nickname}}</view>
                   <view class="local_box">
-                        <image src="/images/local.png"></image>
+                        <image src="/images/local.jpg"></image>
                         <view>{{userinfo.campus.name}}</view>
                   </view>
             </view>
-            <view class="sex">
-                  <image lazy-load src="{{userinfo.info.gender==0?'/images/none.png':(userinfo.info.gender==1?'/images/boy.png':'/images/girl.png')}}"></image>
-            </view>
+           <!--  <view class="sex">
+                  <image lazy-load src="{{userinfo.info.gender==0?'/images/none.jpg':(userinfo.info.gender==1?'/images/boy.jpg':'/images/girl.jpg')}}"></image>
+            </view> -->
       </view>
       <view class="time_box">
             <view class="kind">{{collegeName.name}}类物品</view>
@@ -76,12 +76,12 @@
 <!--底部导航-->
 <view class="tabbar">
       <view class="t_card">
-            <image src="/images/home.png"></image>
+            <image src="/images/tabbar/home.jpg"></image>
             <text>首页</text>
             <button class="t_button" bindtap="home"></button>
       </view>
       <view class="t_card" bindtap="my">
-            <image src="/images/tabbar/my.png"></image>
+            <image src="/images/tabbar/my.jpg"></image>
             <text>我的</text>
       </view>
       <view class="buy_box">

@@ -41,10 +41,11 @@
     },
     "appid": "wx9a0ce42e4349577f",
     "projectname": "%E6%A0%A1%E5%9B%AD%E4%BA%A4%E6%98%93%E5%B9%B3%E5%8F%B0",
-    "libVersion": "2.12.0",
+    "libVersion": "2.19.6",
     "simulatorType": "wechat",
     "simulatorPluginLibVersion": {},
     "cloudfunctionTemplateRoot": "cloudfunctionTemplate",
+    "compileType": "miniprogram",
     "condition": {
         "search": {
             "list": []
@@ -63,12 +64,7 @@
         },
         "miniprogram": {
             "list": [
-                {
-                    "id": -1,
-                    "name": "db guide",
-                    "pathName": "pages/databaseGuide/databaseGuide",
-                    "query": ""
-                },
+
                 {
                     "id": -1,
                     "name": "注册",
@@ -88,13 +84,6 @@
                     "name": "详情页",
                     "pathName": "pages/detail/detail",
                     "query": "scene=3c4c6d855d70f8b6124543920c2934e6",
-                    "scene": null
-                },
-                {
-                    "id": 4,
-                    "name": "支付成功",
-                    "pathName": "pages/success/success",
-                    "query": "id=efdeb2615d72487b1319b22650cd56cb",
                     "scene": null
                 },
                 {
@@ -122,27 +111,6 @@
                     "id": -1,
                     "name": "关于我们",
                     "pathName": "pages/about/about",
-                    "query": "",
-                    "scene": null
-                },
-                {
-                    "id": -1,
-                    "name": "钱包",
-                    "pathName": "pages/parse/parse",
-                    "query": "",
-                    "scene": null
-                },
-                {
-                    "id": -1,
-                    "name": "充值",
-                    "pathName": "pages/recharge/recharge",
-                    "query": "",
-                    "scene": null
-                },
-                {
-                    "id": -1,
-                    "name": "提现",
-                    "pathName": "pages/reflect/reflect",
                     "query": "",
                     "scene": null
                 },
@@ -193,12 +161,6 @@
                     "name": "pages/about/about",
                     "pathName": "pages/about/about",
                     "query": "",
-                    "scene": null
-                },
-                {
-                    "id": -1,
-                    "name": "pages/message/message",
-                    "pathName": "pages/message/message",
                     "scene": null
                 }
             ]

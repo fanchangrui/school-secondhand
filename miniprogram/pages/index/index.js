@@ -15,7 +15,7 @@ Page({
             indexTip: '',
             openid: app.openid
       },
-      // 用户点击右上角分享给好友,要先在分享好友这里设置menus的两个参数,才可以分享朋友圈
+      // 用户点击右上角分享给好友
       onShareAppMessage: function () {
             wx.showShareMenu({
                   withShareTicket: true,
@@ -35,7 +35,7 @@ Page({
       onLoad() {
             this.listkind();
             this.getbanner();   
-            
+           
       },
 
       //监测屏幕滚动
@@ -86,6 +86,7 @@ Page({
       },
       //跳转搜索
       search() {
+           
             wx.navigateTo({
                   url: '/pages/search/search',
             })

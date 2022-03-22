@@ -4,7 +4,7 @@
             <view class="card" bindtap="detail" data-detail="{{item}}">
                   <view class="a">
                         <view class="a1 {{item.status==1?'text-red':''}}">
-                              <image lazy-load src="/images/onsell.png"></image>
+                              <image lazy-load src="/images/onsell.jpg"></image>
                               {{item.status==0?'待出售':(item.status==1||item.status==5?'交易中':(item.status==2?'已完成':'已取消'))}}
                         </view>
                         <view class="a2">{{morejs.timelog(item.creat)}}</view>
@@ -32,7 +32,7 @@
 
 <!--无内容显示-->
 <view class="nocontent" wx:if="{{list.length==0}}">
-      <image src="/images/blank.png"></image>
+      <image src="/images/blank.jpg"></image>
       <view class="blank_text">这里空空如也~</view>
 </view>
 
@@ -43,6 +43,6 @@
 </block>
 <van-transition show="{{ scrollTop>500 }}" custom-class="block" duration="600">
       <view class="totop" bindtap="gotop">
-            <image src="/images/top.png"></image>
+            <image src="/images/top.jpg"></image>
       </view>
 </van-transition>

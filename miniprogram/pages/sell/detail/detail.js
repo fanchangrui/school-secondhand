@@ -110,21 +110,7 @@ Page({
                                                             icon: 'none'
                                                       })
                                                       that.getdetail(that.data.detail._id);
-                                                      wx.showModal({
-                                                            title: '打赏小程序',
-                                                            content: '请开发者喝阔落？',
-                                                            showCancel: true, 
-                                                            cancelText:'下次一定',
-                                                            confirmText:'现在就去',
-                                                            confirmColor: '#fbbd08', 
-                                                            success(res) {
-                                                                  if (res.confirm) {
-                                                                        wx.previewImage({
-                                                                              urls: ['https://7461-taoshaoji-46f0r-1302243411.tcb.qcloud.la/appreciate-code/appreciateimg.jpg?sign=b6789b4ae3b6c830689f41ddca8f183e&t=1597523262'],
-                                                                        })
-                                                                  }
-                                                            }
-                                                      })
+                                                 
                                                 },
                                                 fail(e) {
                                                       wx.hideLoading();
@@ -188,29 +174,13 @@ Page({
             })
       },
 
-      //历史记录
-      history(name, num, type) {
-            let that = this;
-            db.collection('history').add({
-                  data: {
-                        stamp: new Date().getTime(),
-                        type: type, //1充值2支付
-                        name: name,
-                        num: num,
-                        oid: app.openid
-                  },
-                  success: function (res) {
-                        console.log(res)
-                  },
-                  fail: console.error
-            })
-      },
+     
 
-      /* goo(e) {
+      goo(e) {
             var myid = this.data.detail.buyerInfo._openid;
             var sallerid = this.data.detail.seller;
             wx.cloud.init({
-                  env: 'taoshaoji-46f0r',
+                  env: 'cloud1-7gzzujgma68a1f08',
                   traceUser: true
             });
             //初始化数据库
@@ -254,6 +224,6 @@ Page({
                         duration: 1500
                   })
             }
-      }, */
+      },
 
 })

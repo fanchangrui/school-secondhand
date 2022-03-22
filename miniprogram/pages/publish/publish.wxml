@@ -45,7 +45,7 @@
 				<view class="b_name">类别</view>
 				<radio-group class="kind-group" bindchange="kindChange">
 					<label class="b_radio" wx:for="{{kind}}" wx:key="id">
-						<radio color="#fbbd08" value="{{item.id}}" checked="{{item.check}}" />{{item.name}}
+						<radio color="#87CEFA" value="{{item.id}}" checked="{{item.check}}" />{{item.name}}
 					</label>
 				</radio-group>
 			</view>
@@ -58,7 +58,7 @@
 						<view class="b_picker">
 							<block wx:if="{{cids!==-1}}">当前选择：{{college[cids].name}}</block>
 							<block wx:if="{{cids==-1}}">请选择商品类别</block>
-							<image class="right" src="/images/right.png" />
+							<image class="right" src="/images/right.jpg" />
 						</view>
 					</picker>
 				</view>
@@ -68,7 +68,7 @@
 				<view class="name">取货方式</view>
 				<radio-group class="kind-group" bindchange="delChange">
 					<label class="b_radio" wx:for="{{delivery}}" wx:key="id">
-						<radio color="#fbbd08" value="{{item.id}}" checked="{{item.check}}" />{{item.name}}
+						<radio color="#87CEFA" value="{{item.id}}" checked="{{item.check}}" />{{item.name}}
 					</label>
 				</radio-group>
 			</view>
@@ -104,7 +104,7 @@
 <!--步骤二-->
 <van-transition show="{{ show_c }}" name="fade-right" custom-class="block" duration="{{entime}}">
 	<view class="c_contain" style="height:{{systeminfo.windowHeight-66.8}}px">
-		<image class="c_success" src="/images/success.png"></image>
+		<image class="c_success" src="/images/success.jpg"></image>
 		<view class="c_title">恭喜您 发布成功</view>
 		<view class="c_des">订单的实时状态请在我的主页查看</view>
 		<view class="c_see" bindtap="detail">查看详情</view>

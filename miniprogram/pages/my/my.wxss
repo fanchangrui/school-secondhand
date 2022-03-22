@@ -176,7 +176,7 @@
       height: 6rpx;
       width: 60rpx;
       border-radius: 3rpx;
-      border-bottom:6rpx solid   #fbbd08;
+      border-bottom:6rpx solid   #87CEFA;
 }
 
 .share_button {
@@ -197,4 +197,7 @@
       height: 60rpx;
       width: 1rpx;
       border-left: 1rpx solid #e7e7e7;
+}
+.avator image{
+      margin-left: -25rpx;
 }

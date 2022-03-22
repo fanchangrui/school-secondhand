@@ -4,7 +4,7 @@
 			<image class="goods_img" src="{{detail.bookinfo.pic[0]}}"></image>
 			<view class="goods_content">
 				<view class="goods_title text-cut">{{detail.bookinfo.good}}</view>
-				<view class="goods_author text-cut">买家：{{detail.buyerInfo.info.nickName}}</view>
+				<view class="goods_author text-cut">买家：{{detail.buyerInfo.nickname}}</view>
 			</view>
 			<view class="goods_price">￥{{detail.price}}元</view>
 		</view>
