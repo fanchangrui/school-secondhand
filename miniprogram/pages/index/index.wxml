@@ -11,7 +11,7 @@
 <swiper class="banner" indicator-dots autoplay indicator-active-color="#87CEFA" circular>
       <block wx:for="{{banner}}" wx:key="id">
             <swiper-item>
-                  <image lazy-load src="{{item.img}}" bindtap="goweb" data-web="{{item}}" class="banner_image" mode="aspectFill" />
+                  <image lazy-load src="{{item.img}}"  data-web="{{item}}" class="banner_image" mode="aspectFill" />
             </swiper-item>
       </block>
 </swiper>

@@ -4,7 +4,9 @@
       padding: 24rpx;
       box-sizing: border-box;
 }
-
+.swiperh{
+      height: 400rpx;
+}
 .chou {
       padding-top: 30rpx;
 }
@@ -17,7 +19,7 @@
 
 .top_img image {
       width: 300rpx;
-      height: 300rpx;
+      height: 500rpx;
 }
 
 .title {

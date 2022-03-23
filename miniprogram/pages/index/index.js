@@ -236,6 +236,7 @@ Page({
             console.log(e.currentTarget.dataset.web.url)
             wx.navigateTo({
                   url: '/pages/web/web?url=' + e.currentTarget.dataset.web.url,
+                
             })
       },
       onShareAppMessage() {

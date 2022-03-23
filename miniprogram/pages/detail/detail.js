@@ -263,7 +263,7 @@ Page({
 
             wx.showModal({
                   title: '确认提示',
-                  content: '是否确认下单购买此商品？',
+                  content: '是否确认下单预定此商品？',
                   success(res) {
                         if (res.confirm) {
                               if (!that.data.isExist) {
@@ -427,7 +427,7 @@ Page({
                         address:that.data.address,
                         type: 1,
                         //email:'1293707902@qq.com',
-                        email:that.data.buyerInfo.email,
+                        email:that.data.userinfo.email,
                         describe: that.data.publishinfo.bookinfo.describe,
                         good: that.data.publishinfo.bookinfo.good,
                         nickName: that.data.buyerInfo.info.nickName,

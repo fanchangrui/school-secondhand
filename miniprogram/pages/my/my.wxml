@@ -63,7 +63,7 @@
 		<image src="/images/go.jpg"></image>
 		<button open-type="feedback"></button>
 	</view>
-	<view class="bottom_card" bindtap="go" data-go="/pages/use/use" data-status="1">
+	<view class="bottom_card" bindtap="goky" data-go="/pages/use/use" data-status="1">
 		<view class="bottom_1">
 			<image src="/images/parse.jpg"></image>
 			<view>友情链接</view>

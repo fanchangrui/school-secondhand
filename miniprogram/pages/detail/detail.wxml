@@ -1,7 +1,8 @@
 <wxs src="../../common.wxs" module="morejs" />
 <view class="top_contain">
       <!--轮播图-->
-      <swiper indicator-dots='true' autoplay='true' interval='5000' duration='500' circular="true" >
+      <swiper indicator-dots='true' autoplay='true' interval='5000' duration='500' circular="true" class="swiperh" 
+      style="height: 500rpx;margin-left: 100rpx;width: 500rpx;">
             <block wx:for="{{publishinfo.bookinfo.imgs}}" wx:key="index">
                   <swiper-item class="image">
                         <image src='{{item}}' mode="scaleToFill" bindtap="img" data-src="{{item}}"></image>
@@ -65,7 +66,7 @@
             </view>
             <!--物品详情预览-->
             <block class="image" wx:for="{{publishinfo.bookinfo.imgs}}" wx:key="index">
-                  <view>
+                  <view style="margin-left: 40rpx;">
                         <!-- <image class='img' src='{{item}}' data-index='index' bindtap='previewImg'></image>-->
                         <image src="{{item}}" mode="scaleToFill" bindtap="img" data-src="{{item}}"></image>
                   </view>
@@ -85,7 +86,7 @@
             <text>我的</text>
       </view>
       <view class="buy_box">
-            <view class="buy shadow" bindtap="buy">{{publishinfo.status==0?'立即购买':(publishinfo.status==1?'刚刚被抢光了':(publishinfo.status==2?'已出售':'已下架'))}}</view>
+            <view class="buy shadow" bindtap="buy">{{publishinfo.status==0?'立即预定':(publishinfo.status==1?'刚刚被抢光了':(publishinfo.status==2?'已出售':'已下架'))}}</view>
       </view>
 </view>
 

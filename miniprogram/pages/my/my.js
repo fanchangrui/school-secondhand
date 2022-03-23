@@ -74,6 +74,18 @@ Page({
             wx.navigateTo({
                   url: e.currentTarget.dataset.go
             })
+           
+      },
+      goky(){
+            wx.navigateToMiniProgram({
+                  appId: 'wx72147cfdbf972b79',
+                  extraData: {
+                    foo: 'bar'
+                  },
+                  success(res) {
+                    // 打开成功
+                  }
+                })
       },
       //展示分享弹窗
       showShare() {

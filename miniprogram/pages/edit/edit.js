@@ -129,7 +129,7 @@ Page({
                   return false;
             }
             //校检QQ号
-            let qqnum = that.data.qqnum;
+         /*    let qqnum = that.data.qqnum;
             if (qqnum !== '') {
                   if (!(/^\s*[.0-9]{5,11}\s*$/.test(qqnum))) {
                         wx.showToast({
@@ -139,19 +139,20 @@ Page({
                         });
                         return false;
                   }
-            }
-            //校检微信号
-            /* let wxnum = that.data.wxnum;
+            } */
+           // 校检微信号(手机)
+             let wxnum = that.data.wxnum;
             if (wxnum !== '') {
-                  if (!(/^[a-zA-Z]([-_a-zA-Z0-9]{5,19})+$/.test(wxnum))) {
+                  if (!(/^(13[0-9]|14[01456879]|15[0-35-9]|16[2567]|17[0-8]|18[0-9]|19[0-35-9])\d{8}$/
+                  .test(wxnum))) {
                         wx.showToast({
-                              title: '请输入正确微信号',
+                              title: '请输入正确手机号',
                               icon: 'none',
                               duration: 2000
                         });
                         return false;
                   }
-            } */
+            } 
             wx.showLoading({
                   title: '正在提交',
             })
