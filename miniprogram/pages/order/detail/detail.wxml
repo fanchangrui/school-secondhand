@@ -36,14 +36,8 @@
 		</view>
 		<view class="border"></view>
 		<view class="orderfare">CONTACT SELLER</view>
-		<view class="fare_box" bindtap="copy" data-copy="{{userinfo.email}}" data-name="邮箱">
-			<view class="fare_title">邮箱</view>
-			<view class="fare_des">{{userinfo.email}}</view>
-		</view>
-		<view class="fare_box" wx:if="{{userinfo.qqnum!==''}}" bindtap="copy" data-copy="{{userinfo.qqnum}}" data-name="QQ">
-			<view class="fare_title">QQ</view>
-			<view class="fare_des">{{userinfo.qqnum}}</view>
-		</view>
+		
+
 		<view class="border"></view>
 		<view class="bot_box" wx:if="{{detail.status==1}}">
 			<view class="contact" bindtap="confirm">确认收货</view>

@@ -3,7 +3,6 @@ const config = require("config.js");
 App({
       openid: '',
       userinfo:'',
-      roomlist:[],
       canReflect:true,
       onLaunch: function() {
             if (!wx.cloud) {

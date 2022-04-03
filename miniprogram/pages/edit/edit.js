@@ -1,4 +1,5 @@
 const db = wx.cloud.database();
+const _= db.command
 const app = getApp();
 const config = require("../../config.js");
 Page({
@@ -28,6 +29,18 @@ Page({
                         console.log('授权失败', res)
                   }
             })
+         /*    db.collection('order').doc('381d149061ac69c600a02ead009b8ba0').update({
+                  data: {
+                    bookinfo: _.rename('goodinfo')
+                  },
+                  success(res){
+                        console.log(成功,res);
+                  },
+                  fail(res){
+                        console.log(失败,res);
+                  }
+                }) */
+                
       
           },
       choose(e) {

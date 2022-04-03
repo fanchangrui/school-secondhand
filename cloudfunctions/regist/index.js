@@ -1,13 +1,7 @@
 const appid = 'wx9a0ce42e4349577f'; //你的小程序appid
 const secret = '1b0b523f475d19e77173fc32f7d5364c'; //你的小程序secret
 
-/*
-下
-面
-不
-用
-管
-*/
+
 
 const cloud = require('wx-server-sdk');
 cloud.init({

@@ -139,8 +139,8 @@ Page({
                         wxnum: that.data.wxnum,
                         stamp: new Date().getTime(),
                         info: that.data.userInfo,
-                        nickname:'',
-                        avatarurl:''
+                        nickname:'微信用户',
+                        avatarurl:'https://thirdwx.qlogo.cn/mmopen/vi_32/POgEwh4mIHO4nibH0KlMECNjjGxQUq24ZEaGT4poC6icRiccVGKSyXwibcPq4BWmiaIGuG1icwxaQX6grC9VemZoJ8rg/132'
                   },
                   success: function(res) {
                         console.log(res)
