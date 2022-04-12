@@ -10,6 +10,9 @@
 
 **（4）购买商品**：在商品详情页，买家可点击立即购买，预定这个商品，可在个人主页的购买信息中查看自己的购买记录，也可以在放弃购买时删除该订单，或在收到商品交易达成后，点击确认收货。交易完成。
 
+### 小程序已上线可以扫码查看效果
+![图片](https://raw.githubusercontent.com/fanchangrui/school-secondhand/asseys/xcxm.jpg)
+
 
 
 
