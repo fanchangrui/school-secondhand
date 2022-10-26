@@ -25,6 +25,8 @@
 ![图片](https://raw.githubusercontent.com/fanchangrui/school-secondhand/assets/xcxm.jpg)
 ![图片](https://github.com/fanchangrui/school-secondhand/blob/main/assets/xcxm.jpg)
 
+### （10月26日）因为微信云服务免费额度取消，本服务器资源可能被释放
+
 
 
 
