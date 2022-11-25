@@ -22,7 +22,7 @@
 **（6）联系客服**：可以在我的页面联系客服进行询问和反馈。
 
 ### 小程序已上线可以扫码查看效果
-![图片](https://raw.githubusercontent.com/fanchangrui/school-secondhand/assets/xcxm.jpg)
+![图片](https://github.com/fanchangrui/school-secondhand/blob/main/assets/xcxm.jpg)
 
 ### （10月26日）因为微信云服务免费额度取消，本服务器资源可能被释放
 
